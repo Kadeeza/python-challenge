@@ -8,7 +8,6 @@ budget_csvpath = os.path.join('Resources','budget_data.csv')
 # defining variable to hold 
 with open(budget_csvpath) as budget_csvfile:
     budget_csvread = csv.reader (budget_csvfile, delimiter=',')
-    print (budget_csvread)
 
     # storing header row
     budget_csvheader = next(budget_csvread)
@@ -46,7 +45,7 @@ with open(budget_csvpath) as budget_csvfile:
     Max_change = max(Changes)
     Min_change = min(Changes)
 
-    print (Max_increase)
+    
 
 
 
