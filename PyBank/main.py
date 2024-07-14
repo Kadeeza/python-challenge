@@ -34,8 +34,20 @@ with open(budget_csvpath) as budget_csvfile:
     print (f"The total number of months in the dataset is: {row_count}")
     print (f"The net total amount of Profit/Losses is: ${Total_amount}")
 
-    #looping through the Profit_Losses list
-    for value in Profit_Losses:
-        
+    # looping through the Profit_Losses list
+    for i in range(len(Profit_Losses)-1):
+        Changes.append (Profit_Losses[i]-Profit_Losses[i+1])
+    print(Changes)
+
+    #Find average change
+    Average_Change = sum(Changes)/len(Changes)    
+    print (round(Average_Change,2))
+
+    Max_change = max(Changes)
+    Min_change = min(Changes)
+
+    print (Max_increase)
+
+
 
 
