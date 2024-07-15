@@ -3,9 +3,9 @@ import os
 import csv
 
 # defining variable to hold csvfile path
-election_csvpath = os.path.join('Resources','election_data.csv')
+election_csvpath = os.path.join("..","PyPoll","Resources","election_data.csv")
 
-# opeming csv file
+# opening csv file
 with open(election_csvpath) as election_csvfile:
     election_csvread = csv.reader (election_csvfile, delimiter=',')
 
@@ -13,9 +13,9 @@ with open(election_csvpath) as election_csvfile:
     election_csvheader = next(election_csvread)
     print (f"The header row for the budget_data file is {election_csvheader}")
 
-
+    # initializing variables
     row_count = 0
-    Charles_count= 0
+    Charles_count = 0
     Diana_count = 0
     Raymon_count= 0
 
@@ -36,12 +36,6 @@ with open(election_csvpath) as election_csvfile:
     Percent_Diana = round((Diana_count/Total_Votes)*100, 3)
     Percent_Raymon = round ((Raymon_count/Total_Votes)*100, 3)
     
-    # print (row_count)
-    # print (Charles_count)
-    # print (Diana_count)
-    # print (Raymon_count)
-    #print (Percent_Charles, Percent_Diana, Percent_Raymon )
-
     # Determining winner
     Max_percent = max([Percent_Charles, Percent_Diana, Percent_Raymon])
     print(Max_percent)
@@ -54,5 +48,9 @@ with open(election_csvpath) as election_csvfile:
         Winner = "Raymon Anthony Doane"
     
     # printing results
-    print (f" Election Results \n ------------------------ \n Total Votes: {Total_Votes} \n ------------------------ \n Charles Casper Stockham: {Percent_Charles}% ({Charles_count}) \n Diana DeGette: {Percent_Diana}% ({Percent_Diana}) \n Raymon Anthony Doane: {Percent_Raymon}% ({Raymon_count}) \n ------------------------ \n Winner: {Winner}")
+    print (f" Election Results \n ------------------------ \n Total Votes: {Total_Votes} \n ------------------------ \n Charles Casper Stockham: {Percent_Charles}% ({Charles_count}) \n Diana DeGette: {Percent_Diana}% ({Diana_count}) \n Raymon Anthony Doane: {Percent_Raymon}% ({Raymon_count}) \n ------------------------ \n Winner: {Winner}")
 
+    # writing results to .txt file
+output_path = os.path.join("..","PyPoll","analysis","Election_Results.txt")
+with open(output_path,"w") as election_txtfile:
+    election_txtfile.write (f" Election Results \n ------------------------ \n Total Votes: {Total_Votes} \n ------------------------ \n Charles Casper Stockham: {Percent_Charles}% ({Charles_count}) \n Diana DeGette: {Percent_Diana}% ({Diana_count}) \n Raymon Anthony Doane: {Percent_Raymon}% ({Raymon_count}) \n ------------------------ \n Winner: {Winner}")
