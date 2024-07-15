@@ -40,7 +40,7 @@ with open(election_csvpath) as election_csvfile:
     # print (Charles_count)
     # print (Diana_count)
     # print (Raymon_count)
-    print (Percent_Charles, Percent_Diana, Percent_Raymon )
+    #print (Percent_Charles, Percent_Diana, Percent_Raymon )
 
     # Determining winner
     Max_percent = max([Percent_Charles, Percent_Diana, Percent_Raymon])
@@ -53,4 +53,6 @@ with open(election_csvpath) as election_csvfile:
     else:
         Winner = "Raymon Anthony Doane"
     
-    print (Winner)
+    # printing results
+    print (f" Election Results \n ------------------------ \n Total Votes: {Total_Votes} \n ------------------------ \n Charles Casper Stockham: {Percent_Charles}% ({Charles_count}) \n Diana DeGette: {Percent_Diana}% ({Percent_Diana}) \n Raymon Anthony Doane: {Percent_Raymon}% ({Raymon_count}) \n ------------------------ \n Winner: {Winner}")
+
