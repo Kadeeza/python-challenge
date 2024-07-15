@@ -11,8 +11,7 @@ with open(election_csvpath) as election_csvfile:
 
     # storing header row
     election_csvheader = next(election_csvread)
-    print (f"The header row for the budget_data file is {election_csvheader}")
-
+   
     # initializing variables
     row_count = 0
     Charles_count = 0
@@ -50,7 +49,7 @@ with open(election_csvpath) as election_csvfile:
     # printing results
     print (f" Election Results \n ------------------------ \n Total Votes: {Total_Votes} \n ------------------------ \n Charles Casper Stockham: {Percent_Charles}% ({Charles_count}) \n Diana DeGette: {Percent_Diana}% ({Diana_count}) \n Raymon Anthony Doane: {Percent_Raymon}% ({Raymon_count}) \n ------------------------ \n Winner: {Winner}")
 
-    # writing results to .txt file
+# writing results to .txt file
 output_path = os.path.join("..","PyPoll","analysis","Election_Results.txt")
 with open(output_path,"w") as election_txtfile:
     election_txtfile.write (f" Election Results \n ------------------------ \n Total Votes: {Total_Votes} \n ------------------------ \n Charles Casper Stockham: {Percent_Charles}% ({Charles_count}) \n Diana DeGette: {Percent_Diana}% ({Diana_count}) \n Raymon Anthony Doane: {Percent_Raymon}% ({Raymon_count}) \n ------------------------ \n Winner: {Winner}")
