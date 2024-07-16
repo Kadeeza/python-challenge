@@ -4,7 +4,7 @@ The repository contains two folders: PyBank and PyPoll. In the PyBank analysis, 
 
 The Pypoll analysis folder holds the election_data csv file which contains the ballot, county and candidate information from a recent election. The main.py script has been used to analyze this data to produce a text file containing insights such as: total number of votes cast, percentage of votes each candidate won, total number of votes each candidate won, winner of the election based on popular vote.
 
-The file structure for both PyBank and PyPoll folders are similar. See below for additional info:
+The file structure for both PyBank and PyPoll folders is similar. See below for additional info:
 
 PyBank - Folder
 * Resources - Folder
