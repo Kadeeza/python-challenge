@@ -8,14 +8,14 @@ The file structure for both PyBank and PyPoll folders are similar. See below for
 
 PyBank - Folder
 * Resources - Folder
-* * Contains the budget_data.csv file
+  * Contains the budget_data.csv file
 * analysis - Folder
-* * Contains output of main.py python script in a text file called "Financial_Analysis"
+  * Contains output of main.py python script in a text file called "Financial_Analysis"
 * main.py - python script
 
 PyPoll - Folder
 * Resources - Folder
-* * Contains the election_data.csv file
+  * Contains the election_data.csv file
 * analysis - Folder
-* * Contains output of main.py python script in a text file called "Election_Results"
+  * Contains output of main.py python script in a text file called "Election_Results"
 * main.py - python script
